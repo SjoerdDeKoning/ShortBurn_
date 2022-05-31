@@ -8,7 +8,7 @@ public enum Season
 public class TimeTravel : MonoBehaviour
 {
     [Header("Player Info")]
-    public GameObject player;
+    public CharacterController player;
     
     [Header("Level info")]
     public GameObject summerLevel;
@@ -22,7 +22,7 @@ public class TimeTravel : MonoBehaviour
     [SerializeField]private Material skyboxSummer;
     [SerializeField]private Material skyboxWinter;
     [SerializeField]private Material skyboxAutumn;
-    [SerializeField]private Material skyboxSping;
+    [SerializeField]private Material skyboxSpring;
     
     [Header("Events / Triggers")]
     public UnityEvent onTimeWarp;
@@ -40,7 +40,9 @@ public class TimeTravel : MonoBehaviour
     /// <param name="season"> the season you want to travel to</param>
     public void TimeWarp(Season season)
     {
+        player.enabled = false;
         Vector3 playerToLevel = player.transform.localPosition;
+        Debug.Log(playerToLevel);
         switch (season) 
         {
             case Season.Summer:
@@ -66,13 +68,15 @@ public class TimeTravel : MonoBehaviour
                 break;
             case Season.Spring:
                 player.transform.SetParent(summerLevel.transform);
-                if (skyboxSping!= null)
+                if (skyboxSpring!= null)
                 {
-                    RenderSettings.skybox = skyboxSping;                   
+                    RenderSettings.skybox = skyboxSpring;                   
                 }
                 break;
         }
         player.transform.localPosition = playerToLevel;
         onTimeWarp.Invoke();
+        Debug.Log(player.transform.position);
+        player.enabled = true;
     }
 }
