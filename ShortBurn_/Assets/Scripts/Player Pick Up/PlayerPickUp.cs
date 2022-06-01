@@ -6,16 +6,16 @@ namespace Player_Pick_Up
 {
     public class PlayerPickUp : MonoBehaviour
     {
-        public GameObject pickable;
+        private PickUpItem _pickable;
         public GameObject playerHands;
-        public UnityEvent onItemPickup;
-        public Camera playerCamera;
+        public Transform raycastPoint;
         public float raycastMaxDistance;
+
+        public UnityEvent onItemPickup;
 
         private InputManager _input;
         private void Start()
         {
-            playerCamera = Camera.main;
             _input = InputManager.instance;
         }
 
@@ -28,41 +28,40 @@ namespace Player_Pick_Up
         }
         private void TryPickUp()
         {
-            if (_input.PickupItem())
+            if (_pickable)
             {
-                if (pickable)
+                DropPickedUpItem(_pickable);
+            }
+            else
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(raycastPoint.position, raycastPoint.forward, out hit,raycastMaxDistance))
                 {
-                    DropPickedUpItem(pickable);
-                }
-                else
-                {
-                    Ray ray = playerCamera.ViewportPointToRay(Vector3.forward );;
-                    RaycastHit hit;
-                    if (Physics.Raycast(ray, out hit, raycastMaxDistance))
+                    _pickable = hit.transform.GetComponent<PickUpItem>();
+                    if (_pickable)
                     {
-                        var pickableItem = hit.transform.GetComponent<PickUpItem>();
-                        if (pickableItem)
-                        {
-                            pickable = pickableItem.gameObject;
-                            PickUpItem(pickable);
-                        }
+                        PickUpItem(_pickable);
                     }
                 }
             }
         }
 
-        private void DropPickedUpItem(GameObject item)
+        private void DropPickedUpItem(PickUpItem item)
         {
-            pickable = null;
+            _pickable = null;
             item.transform.SetParent(null);
-            item.GetComponent<PickUpItem>().GetRigidbody.AddForce(item.transform.forward * 2,ForceMode.VelocityChange);
+
+            item.GetRigidbody.isKinematic = false;
+            item.GetRigidbody.AddForce(item.transform.forward * 3,ForceMode.VelocityChange);
         }
         
-        private void PickUpItem(GameObject item)
+        private void PickUpItem(PickUpItem item)
         {
+            item.GetRigidbody.isKinematic = true;
+            
             item.transform.parent = playerHands.transform;
             item.transform.localPosition = Vector3.zero;
-            item.transform.eulerAngles = Vector3.zero;
+            item.transform.localEulerAngles = Vector3.zero;
         }
     }
 }
