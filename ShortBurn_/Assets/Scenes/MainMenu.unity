@@ -13613,6 +13613,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 917219785377063901, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
+      propertyPath: m_text
+      value: 'WASD to move
+
+        Mouse to turn around and interact with objects
+
+        C
+        to crouch
+
+        F to pick up
+
+        Escape to pause
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 917219785377063901, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -13623,6 +13638,14 @@ PrefabInstance:
     - target: {fileID: 917219785377063901, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 917219785377063901, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 917219785420186804, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 917219785467189662, guid: f4cc24ac59c46d94d84b69a7fd26efea, type: 3}
       propertyPath: m_fontColor.b
