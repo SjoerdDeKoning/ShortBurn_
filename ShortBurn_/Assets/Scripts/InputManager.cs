@@ -50,7 +50,12 @@ namespace Player_Controls
         /// <returns> Returns the Bool from the Player Movement  </returns>
         public bool PlayerCrouch()
         {
-            return _playerControls.Player.Crouch.inProgress;
+            return _playerControls.Player.Crouch.triggered;
+        }
+
+        public bool PickupItem()
+        {
+            return _playerControls.Player.UseIitem.triggered;
         }
     }
 }
