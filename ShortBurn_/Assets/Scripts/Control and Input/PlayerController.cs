@@ -23,6 +23,7 @@ namespace Player_Controls
         private Transform _cameraTransform;
         private void Start()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             _controller = GetComponent<CharacterController>();
             _inputManager = InputManager.instance;
             _cameraTransform = Camera.main.transform;
@@ -63,11 +64,13 @@ namespace Player_Controls
             {
                 if (_menuIsOpen)
                 {
+                    Cursor.lockState = CursorLockMode.Locked;
                     _timeMenu.SetActive(false);
                     _menuIsOpen = false;
                 }
                 else
                 {
+                    Cursor.lockState = CursorLockMode.Confined;
                     _timeMenu.SetActive(true);
                     _menuIsOpen = true;
                 }
