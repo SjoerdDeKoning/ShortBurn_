@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyItemController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool _Door = false;
+    [SerializeField] private bool _key = false;
+
+    [SerializeField] private KeyInventory _keyInventory = null;
+
+    private KeyDoorController _DoorObject;
+
+    private void Start()
     {
-        
+        if (_Door)
+        {
+            _DoorObject = GetComponent<KeyDoorController>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ObjectInteraction()
     {
-        
+        if (_Door)
+        {
+            _DoorObject.OpenDoor();
+        }
+
+        else if (_key)
+        {
+            _keyInventory.hasKey = true;
+        }
     }
 }
