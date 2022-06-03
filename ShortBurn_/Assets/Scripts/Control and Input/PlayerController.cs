@@ -9,11 +9,13 @@ namespace Player_Controls
         [SerializeField]private float playerSpeed = 2.0f;
         [SerializeField]private float gravityValue = -9.81f;
         [SerializeField] private float crouchHeight = 0.5f;
-    
+        [SerializeField] private GameObject playerModel;
+
         private CharacterController _controller;
         private Vector3 _playerVelocity;
         private bool _groundedPlayer;
-
+        private bool _isCroushed;
+        
         private InputManager _inputManager;
         private Transform _cameraTransform;
         private void Start()
@@ -50,9 +52,25 @@ namespace Player_Controls
             _playerVelocity.y += gravityValue * Time.deltaTime;
             _controller.Move(_playerVelocity * Time.deltaTime);            
         }
+
         private void Crouch()
         {
-            transform.localScale = _inputManager.PlayerCrouch() ? new Vector3(1f, crouchHeight, 1) : new Vector3(1f, 1f, 1f);
+            if (_inputManager.PlayerCrouch())
+                Crouching();
+            else
+                StandingUp();
+        }
+
+        private void Crouching()
+        {
+            _isCroushed = true;
+            _controller.height = 0.3f;
+        }
+
+        private void StandingUp()
+        {
+            _isCroushed = false;
+            _controller.height = 2f;
         }
     }
 }
