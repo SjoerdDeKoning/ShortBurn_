@@ -50,8 +50,8 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_StepOffset: 0.6
+  m_SkinWidth: 0.1
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5182662980398681501
@@ -70,6 +70,8 @@ MonoBehaviour:
   gravityValue: -9.81
   crouchHeight: 0.5
   playerModel: {fileID: 5182662981920343878}
+  _menuIsOpen: 0
+  _timeMenu: {fileID: 0}
 --- !u!114 &5182662980398681500
 MonoBehaviour:
   m_ObjectHideFlags: 0

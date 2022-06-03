@@ -15,11 +15,15 @@ namespace Player_Controls
         private Vector3 _playerVelocity;
         private bool _groundedPlayer;
         private bool _isCroushed;
+
+        public bool _menuIsOpen;
+        [SerializeField]private GameObject _timeMenu;
         
         private InputManager _inputManager;
         private Transform _cameraTransform;
         private void Start()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             _controller = GetComponent<CharacterController>();
             _inputManager = InputManager.instance;
             _cameraTransform = Camera.main.transform;
@@ -30,6 +34,7 @@ namespace Player_Controls
             Movement();
             Gravity();
             Crouch();
+            OpenMenu();
         }
         private void GroundCheck()
         {
@@ -53,6 +58,25 @@ namespace Player_Controls
             _controller.Move(_playerVelocity * Time.deltaTime);            
         }
 
+        private void OpenMenu()
+        {
+            if (_inputManager.OpenTimeMenu())
+            {
+                if (_menuIsOpen)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    _timeMenu.SetActive(false);
+                    _menuIsOpen = false;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Confined;
+                    _timeMenu.SetActive(true);
+                    _menuIsOpen = true;
+                }
+            }
+        }
+        
         private void Crouch()
         {
             if (_inputManager.PlayerCrouch())
@@ -60,13 +84,11 @@ namespace Player_Controls
             else
                 StandingUp();
         }
-
         private void Crouching()
         {
             _isCroushed = true;
             _controller.height = 0.3f;
         }
-
         private void StandingUp()
         {
             _isCroushed = false;

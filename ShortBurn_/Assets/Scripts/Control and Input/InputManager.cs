@@ -57,5 +57,10 @@ namespace Player_Controls
         {
             return _playerControls.Player.UseIitem.triggered;
         }
+
+        public bool OpenTimeMenu()
+        {
+            return (_playerControls.Player.OpenTravelMenu.triggered);
+        }
     }
 }
