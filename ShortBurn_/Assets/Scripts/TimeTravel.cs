@@ -42,7 +42,6 @@ public class TimeTravel : MonoBehaviour
     {
         player.enabled = false;
         Vector3 playerToLevel = player.transform.localPosition;
-        Debug.Log(playerToLevel);
         switch (season) 
         {
             case Season.Summer:
@@ -76,7 +75,6 @@ public class TimeTravel : MonoBehaviour
         }
         player.transform.localPosition = playerToLevel;
         onTimeWarp.Invoke();
-        Debug.Log(player.transform.position);
         player.enabled = true;
     }
 }
