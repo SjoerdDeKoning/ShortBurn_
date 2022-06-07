@@ -8,13 +8,11 @@ namespace Player_Controls
         [Header("Player Info")]
         [SerializeField]private float playerSpeed = 2.0f;
         [SerializeField]private float gravityValue = -9.81f;
-        [SerializeField] private float crouchHeight = 0.5f;
-        [SerializeField] private GameObject playerModel;
+        [SerializeField] private float crouchHeight = 0.3f;
 
         private CharacterController _controller;
         private Vector3 _playerVelocity;
         private bool _groundedPlayer;
-        private bool _isCroushed;
 
         private InputManager _inputManager;
         private Transform _cameraTransform;
@@ -62,12 +60,10 @@ namespace Player_Controls
         }
         private void Crouching()
         {
-            _isCroushed = true;
-            _controller.height = 0.3f;
+            _controller.height = crouchHeight;
         }
         private void StandingUp()
         {
-            _isCroushed = false;
             _controller.height = 2f;
         }
     }
