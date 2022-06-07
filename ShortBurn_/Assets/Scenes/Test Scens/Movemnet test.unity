@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5905845}
   - component: {fileID: 5905844}
   - component: {fileID: 5905847}
+  - component: {fileID: 5905848}
   m_Layer: 0
   m_Name: Manegers
   m_TagString: Untagged
@@ -237,6 +238,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   travel: {fileID: 5905844}
+--- !u!114 &5905848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5912664872b29b479c05b5bbb9a6939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CVCamera: {fileID: 0}
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0012779236
+      value: 0.0005187988
+      inSlope: 1.9820231
+      outSlope: 1.9820231
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4990291
+      value: 0.9870731
+      inSlope: 0.001879096
+      outSlope: 0.001879096
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0003494
+      value: -0.0046712495
+      inSlope: -1.9782649
+      outSlope: -1.9782649
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  DoWarp: 0
 --- !u!1 &60476428
 GameObject:
   m_ObjectHideFlags: 0
