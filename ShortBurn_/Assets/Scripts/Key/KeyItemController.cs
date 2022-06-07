@@ -12,6 +12,8 @@ public class KeyItemController : MonoBehaviour
 
     private KeyDoorController _DoorObject;
 
+    public GameObject key;
+
     private void Start()
     {
         if (_Door)
@@ -25,6 +27,7 @@ public class KeyItemController : MonoBehaviour
         if (_Door)
         {
             _DoorObject.OpenDoor();
+            key.SetActive(false);
         }
 
         else if (_key)

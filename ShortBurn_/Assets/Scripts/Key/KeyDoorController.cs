@@ -7,5 +7,6 @@ public class KeyDoorController : MonoBehaviour
     public void OpenDoor()
     {
         gameObject.SetActive(false);
+        
     }
 }
