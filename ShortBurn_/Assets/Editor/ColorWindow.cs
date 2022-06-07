@@ -4,6 +4,7 @@ using UnityEngine;
 public class ColorWindow : EditorWindow
 { 
     Color color;
+    private Color colorBefore;
 
     [MenuItem("Tools/ColorPicker")]
     public static void ShowWindow()
@@ -24,7 +25,20 @@ public class ColorWindow : EditorWindow
                 Renderer renderer = obj.GetComponent<Renderer>();
                 if (renderer != null)
                 {
+                    colorBefore = renderer.sharedMaterial.color;
                     renderer.sharedMaterial.color = color;
+                }
+            }
+        }
+        
+        if (GUILayout.Button("Revert to last color"))
+        {
+            foreach (GameObject obj in Selection.gameObjects)
+            {
+                Renderer renderer = obj.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.sharedMaterial.color = colorBefore;
                 }
             }
         }
@@ -36,6 +50,7 @@ public class ColorWindow : EditorWindow
                 Renderer renderer = obj.GetComponent<Renderer>();
                 if (renderer != null)
                 {
+                    colorBefore = renderer.sharedMaterial.color;
                     renderer.sharedMaterial.color = Color.white;
                 }
             }
