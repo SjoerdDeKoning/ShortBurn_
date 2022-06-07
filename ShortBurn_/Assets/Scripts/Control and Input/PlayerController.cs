@@ -16,9 +16,6 @@ namespace Player_Controls
         private bool _groundedPlayer;
         private bool _isCroushed;
 
-        public bool _menuIsOpen;
-        [SerializeField]private GameObject _timeMenu;
-        
         private InputManager _inputManager;
         private Transform _cameraTransform;
         private void Start()
@@ -34,7 +31,6 @@ namespace Player_Controls
             Movement();
             Gravity();
             Crouch();
-            OpenMenu();
         }
         private void GroundCheck()
         {
@@ -57,26 +53,6 @@ namespace Player_Controls
             _playerVelocity.y += gravityValue * Time.deltaTime;
             _controller.Move(_playerVelocity * Time.deltaTime);            
         }
-
-        private void OpenMenu()
-        {
-            if (_inputManager.OpenTimeMenu())
-            {
-                if (_menuIsOpen)
-                {
-                    Cursor.lockState = CursorLockMode.Locked;
-                    _timeMenu.SetActive(false);
-                    _menuIsOpen = false;
-                }
-                else
-                {
-                    Cursor.lockState = CursorLockMode.Confined;
-                    _timeMenu.SetActive(true);
-                    _menuIsOpen = true;
-                }
-            }
-        }
-        
         private void Crouch()
         {
             if (_inputManager.PlayerCrouch())

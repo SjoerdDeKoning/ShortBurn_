@@ -1,5 +1,7 @@
+using System;
 using Helper_Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player_Controls
 {
@@ -9,12 +11,19 @@ namespace Player_Controls
     /// </summary>
     public class InputManager : SingletonBehaviour<InputManager>
     {
+        public GameObject TimeMenu;
+        public UnityEvent onOpenTimeMenu;
+        public UnityEvent onCloseTimeMenu;
         private PlayerControls _playerControls;
 
         protected override void Awake()
         {
             base.Awake();
             _playerControls = new PlayerControls();
+        }
+        private void Update()
+        {
+            OpenTimeMenu();
         }
 
         private void OnEnable()
@@ -58,9 +67,25 @@ namespace Player_Controls
             return _playerControls.Player.UseIitem.triggered;
         }
 
-        public bool OpenTimeMenu()
+        public void OpenTimeMenu()
         {
-            return (_playerControls.Player.OpenTravelMenu.triggered);
+            if (_playerControls.Player.OpenTravelMenu.triggered)
+            {
+                if (TimeMenu.activeSelf) 
+                {
+                    // close time menu
+                    TimeMenu.SetActive (false);
+                    Cursor.lockState = CursorLockMode.Locked;
+                    onOpenTimeMenu.Invoke();
+                }
+                else
+                {
+                    // open time menu
+                    TimeMenu.SetActive(true);
+                    Cursor.lockState = CursorLockMode.Confined;
+                    onCloseTimeMenu.Invoke();
+                }
+            }
         }
     }
 }
