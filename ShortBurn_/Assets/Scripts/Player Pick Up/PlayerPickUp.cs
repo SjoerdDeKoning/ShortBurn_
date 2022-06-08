@@ -53,7 +53,7 @@ namespace Player_Pick_Up
             _pickable = null;
             item.transform.SetParent(null);
             
-            if (item.GetComponent<KeyInventory>())
+            if (item.GetComponent<KeyItemController>())
             {
                 keyInventory.hasKey = false;
             }
