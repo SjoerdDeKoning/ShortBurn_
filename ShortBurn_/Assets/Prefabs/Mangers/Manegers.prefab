@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5247282290700776261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5247282290700776256}
+  - component: {fileID: 5247282290700776258}
+  - component: {fileID: 5247282290700776259}
+  - component: {fileID: 5247282290700776257}
+  - component: {fileID: 5247282290700776270}
+  m_Layer: 0
+  m_Name: Manegers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5247282290700776256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247282290700776261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.63583255, y: 2.0566425, z: 1.3191192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5247282290700776258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247282290700776261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd03111b1bee99242b73b3ddc2cb498f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  summerLevel: {fileID: 0}
+  winterLevel: {fileID: 0}
+  autumnLevel: {fileID: 0}
+  springLevel: {fileID: 0}
+  levelOffset: {x: 10, y: 0, z: 0}
+  skyboxSummer: {fileID: 0}
+  skyboxWinter: {fileID: 0}
+  skyboxAutumn: {fileID: 0}
+  skyboxSpring: {fileID: 0}
+  warpTimeDelay: 0.5
+  beforeTImeWarp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5247282290700776270}
+        m_TargetAssemblyTypeName: WarpEfect, Assembly-CSharp
+        m_MethodName: WarpEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTimeWarp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5247282290700776259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247282290700776261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630dd3903851b124a8e118f35d5c5f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeMenu: {fileID: 0}
+  onOpenTimeMenu:
+    m_PersistentCalls:
+      m_Calls: []
+  onCloseTimeMenu:
+    m_PersistentCalls:
+      m_Calls: []
+  CVCamera: {fileID: 0}
+  Pov: {fileID: 0}
+--- !u!114 &5247282290700776257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247282290700776261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bbe594777ef69428b2f3cded8ff6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travel: {fileID: 5247282290700776258}
+--- !u!114 &5247282290700776270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247282290700776261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5912664872b29b479c05b5bbb9a6939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CVCamera: {fileID: 0}
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0012779236
+      value: 0.0005187988
+      inSlope: 2.0031998
+      outSlope: 2.0031998
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4976253
+      value: 0.9948017
+      inSlope: 0.007542789
+      outSlope: 0.007542789
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0003494
+      value: -0.0046712495
+      inSlope: -1.9881142
+      outSlope: -1.9881142
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  DoWarp: 0

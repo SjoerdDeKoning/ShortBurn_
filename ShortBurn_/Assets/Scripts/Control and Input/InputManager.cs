@@ -1,3 +1,4 @@
+using Cinemachine;
 using Helper_Scripts;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,11 +15,25 @@ namespace Player_Controls
         public UnityEvent onOpenTimeMenu;
         public UnityEvent onCloseTimeMenu;
         private PlayerControls _playerControls;
-
+        
+        [SerializeField] private CinemachineVirtualCamera CVCamera;
+        [SerializeField] private CinemachinePOV Pov;
+        
         protected override void Awake()
         {
             base.Awake();
             _playerControls = new PlayerControls();
+            
+            CVCamera = FindObjectOfType<CinemachineVirtualCamera>();
+            if (CVCamera != null)
+            {
+                Pov = CVCamera.GetCinemachineComponent<CinemachinePOV>();
+            }
+            else
+            {
+                Debug.LogError(this.name +" can not find CinemachineVirtualCamera");
+            }
+            
         }
         private void Update()
         {
@@ -72,19 +87,31 @@ namespace Player_Controls
             {
                 if (TimeMenu.activeSelf) 
                 {
-                    // close time menu
-                    TimeMenu.SetActive (false);
-                    Cursor.lockState = CursorLockMode.Locked;
-                    onOpenTimeMenu.Invoke();
+                   closeTimeMenu();
                 }
                 else
                 {
-                    // open time menu
-                    TimeMenu.SetActive(true);
-                    Cursor.lockState = CursorLockMode.Confined;
-                    onCloseTimeMenu.Invoke();
+                   openTimeMenu();
                 }
             }
+        }
+
+        public void closeTimeMenu()
+        {
+             // close time menu
+                                TimeMenu.SetActive (false);
+                                Cursor.lockState = CursorLockMode.Locked;
+                                Pov.enabled = true;
+                                onOpenTimeMenu.Invoke();
+        }
+
+        public void openTimeMenu()
+        {
+             // open time menu
+                                TimeMenu.SetActive(true);
+                                Cursor.lockState = CursorLockMode.Confined;
+                                Pov.enabled = false;
+                                onCloseTimeMenu.Invoke();
         }
     }
 }
