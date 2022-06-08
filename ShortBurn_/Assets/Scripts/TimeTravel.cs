@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,13 +20,17 @@ public class TimeTravel : MonoBehaviour
 
     [SerializeField]private Vector3 levelOffset;
 
-    [Header("SkyBox's")] 
+    [Header("SkyBox's")]
     [SerializeField]private Material skyboxSummer;
     [SerializeField]private Material skyboxWinter;
     [SerializeField]private Material skyboxAutumn;
     [SerializeField]private Material skyboxSpring;
-    
-    [Header("Events / Triggers")]
+
+    [Header(("Warp info"))]
+     [Tooltip("Time in seconds"),SerializeField] private float warpTimeDelay;
+
+    [Header("Events / Triggers")] 
+    public UnityEvent beforeTImeWarp;
     public UnityEvent onTimeWarp;
 
     private void Start()
@@ -34,12 +40,14 @@ public class TimeTravel : MonoBehaviour
         springLevel.transform.position += levelOffset * 3;
     }
 
+    
+    
     /// <summary>
     ///  Will warp the Player to the given "season"
     /// </summary>
     /// <param name="season"> the season you want to travel to</param>
-    public void TimeWarp(Season season)
-    {
+    public async void TimeWarp(Season season)
+    {                      
         player.enabled = false;
         Vector3 playerToLevel = player.transform.localPosition;
         switch (season) 
@@ -73,8 +81,10 @@ public class TimeTravel : MonoBehaviour
                 }
                 break;
         }
-        player.transform.localPosition = playerToLevel;
+        beforeTImeWarp.Invoke();
+        await Task.Delay(TimeSpan.FromSeconds(warpTimeDelay));
         onTimeWarp.Invoke();
+        player.transform.localPosition = playerToLevel;
         player.enabled = true;
     }
 }

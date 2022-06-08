@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5905845}
   - component: {fileID: 5905844}
   - component: {fileID: 5905847}
+  - component: {fileID: 5905848}
   m_Layer: 0
   m_Name: Manegers
   m_TagString: Untagged
@@ -164,6 +165,22 @@ MonoBehaviour:
   skyboxWinter: {fileID: 0}
   skyboxAutumn: {fileID: 0}
   skyboxSpring: {fileID: 0}
+  warpTimeDelay: 0.5
+  beforeTImeWarp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5905848}
+        m_TargetAssemblyTypeName: WarpEfect, Assembly-CSharp
+        m_MethodName: WarpEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTimeWarp:
     m_PersistentCalls:
       m_Calls: []
@@ -182,34 +199,12 @@ MonoBehaviour:
   TimeMenu: {fileID: 173648979}
   onOpenTimeMenu:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2079732660}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onCloseTimeMenu:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2079732660}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  CVCamera: {fileID: 0}
+  Pov: {fileID: 0}
 --- !u!4 &5905846
 Transform:
   m_ObjectHideFlags: 0
@@ -237,6 +232,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   travel: {fileID: 5905844}
+--- !u!114 &5905848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5912664872b29b479c05b5bbb9a6939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CVCamera: {fileID: 0}
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0012779236
+      value: 0.0005187988
+      inSlope: 2.0031998
+      outSlope: 2.0031998
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4976253
+      value: 0.9948017
+      inSlope: 0.007542789
+      outSlope: 0.007542789
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0003494
+      value: -0.0046712495
+      inSlope: -1.9881142
+      outSlope: -1.9881142
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  DoWarp: 0
 --- !u!1 &60476428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,17 +2017,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817606094}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2079732660 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5182662980910730888, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
-  m_PrefabInstance: {fileID: 4310685048898505729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4310685048898505729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2063,6 +2095,10 @@ PrefabInstance:
     - target: {fileID: 5182662980910730890, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182662980910730891, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5182662980910730895, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
       propertyPath: field of view
