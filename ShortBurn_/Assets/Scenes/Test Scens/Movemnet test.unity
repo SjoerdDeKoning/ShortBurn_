@@ -165,7 +165,8 @@ MonoBehaviour:
   skyboxWinter: {fileID: 0}
   skyboxAutumn: {fileID: 0}
   skyboxSpring: {fileID: 0}
-  onTimeWarp:
+  warpTimeDelay: 0.5
+  beforeTImeWarp:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5905848}
@@ -180,6 +181,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onTimeWarp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5905845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,17 +251,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.0012779236
       value: 0.0005187988
-      inSlope: 1.9820231
-      outSlope: 1.9820231
+      inSlope: 2.0031998
+      outSlope: 2.0031998
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.4990291
-      value: 0.9870731
-      inSlope: 0.001879096
-      outSlope: 0.001879096
+      time: 0.4976253
+      value: 0.9948017
+      inSlope: 0.007542789
+      outSlope: 0.007542789
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -265,8 +269,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1.0003494
       value: -0.0046712495
-      inSlope: -1.9782649
-      outSlope: -1.9782649
+      inSlope: -1.9881142
+      outSlope: -1.9881142
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
