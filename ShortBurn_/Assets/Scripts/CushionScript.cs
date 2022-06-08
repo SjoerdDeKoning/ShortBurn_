@@ -9,7 +9,7 @@ namespace puzzle
     {
         [Header("cushion number")] public int cushionNumber;
 
-        public PuzzleManager _manager;
+        [SerializeField] private PuzzleManager _manager;
 
         private void OnTriggerEnter(Collider other)
         {
