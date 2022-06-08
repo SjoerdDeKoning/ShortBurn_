@@ -52,8 +52,12 @@ namespace Player_Pick_Up
         {
             _pickable = null;
             item.transform.SetParent(null);
-            keyInventory.hasKey = false;
-
+            
+            if (item.GetComponent<KeyInventory>())
+            {
+                keyInventory.hasKey = false;
+            }
+            
             item.GetRigidbody.isKinematic = false;
             item.GetRigidbody.AddForce(item.transform.forward * 3,ForceMode.VelocityChange);
         }
