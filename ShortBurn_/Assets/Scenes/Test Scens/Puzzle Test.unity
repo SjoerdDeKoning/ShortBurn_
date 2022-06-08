@@ -961,12 +961,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03521e1809a50534383edd9eccf314cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cushion1: 0
-  cushion2: 0
-  cushion3: 0
-  cushion4: 0
-  latern1: 0
-  latern2: 0
   basementKey: {fileID: 267829728}
   gardenKey: {fileID: 1866240240}
 --- !u!4 &1340625243
