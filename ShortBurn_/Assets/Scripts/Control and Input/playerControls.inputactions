@@ -28,7 +28,7 @@
                     "type": "PassThrough",
                     "id": "02b3689c-932a-4696-8113-d08e4d831458",
                     "expectedControlType": "Vector2",
-                    "processors": "",
+                    "processors": "ScaleVector2",
                     "interactions": "",
                     "initialStateCheck": false
                 },
@@ -36,6 +36,24 @@
                     "name": "UseIitem",
                     "type": "Button",
                     "id": "c570195b-ff23-44cc-9bc6-8f29b375fbbc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenTravelMenu",
+                    "type": "Button",
+                    "id": "9d294406-f5d5-46ab-9d1c-21dbd8008402",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "esc",
+                    "type": "Button",
+                    "id": "c823a645-083b-4a18-a5de-852c32844fa6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -128,6 +146,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa5acebe-9f5c-4429-9585-a96b77f442a8",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTravelMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd5374b7-4dc8-4684-824d-5bf2782acb25",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "esc",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
