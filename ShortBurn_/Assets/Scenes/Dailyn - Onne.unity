@@ -1423,6 +1423,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 838601678738666619, guid: 05ebd5011b98553449b50bb64715e192, type: 3}
   m_PrefabInstance: {fileID: 207991566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &215731102 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5247282290700776259, guid: a59ce425e68f32443b2a6d0739d3ca58, type: 3}
+  m_PrefabInstance: {fileID: 2084671051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630dd3903851b124a8e118f35d5c5f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &218543678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16647,12 +16658,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1290357973}
     - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 215731102}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: WarpSummer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: closeTimeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Player_Controls.InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8942469774199982428, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_IsActive
@@ -16747,12 +16786,40 @@ PrefabInstance:
       value: Canvas 1
       objectReference: {fileID: 0}
     - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1290357973}
     - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 215731102}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: WarpSpring
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: closeTimeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Player_Controls.InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942469774634136945, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}

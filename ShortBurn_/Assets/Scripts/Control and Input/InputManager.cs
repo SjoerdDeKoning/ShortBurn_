@@ -87,21 +87,31 @@ namespace Player_Controls
             {
                 if (TimeMenu.activeSelf) 
                 {
-                    // close time menu
-                    TimeMenu.SetActive (false);
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Pov.enabled = true;
-                    onOpenTimeMenu.Invoke();
+                   closeTimeMenu();
                 }
                 else
                 {
-                    // open time menu
-                    TimeMenu.SetActive(true);
-                    Cursor.lockState = CursorLockMode.Confined;
-                    Pov.enabled = false;
-                    onCloseTimeMenu.Invoke();
+                   openTimeMenu();
                 }
             }
+        }
+
+        public void closeTimeMenu()
+        {
+             // close time menu
+                                TimeMenu.SetActive (false);
+                                Cursor.lockState = CursorLockMode.Locked;
+                                Pov.enabled = true;
+                                onOpenTimeMenu.Invoke();
+        }
+
+        public void openTimeMenu()
+        {
+             // open time menu
+                                TimeMenu.SetActive(true);
+                                Cursor.lockState = CursorLockMode.Confined;
+                                Pov.enabled = false;
+                                onCloseTimeMenu.Invoke();
         }
     }
 }
