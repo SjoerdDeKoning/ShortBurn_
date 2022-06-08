@@ -18,7 +18,6 @@ using UnityEngine.InputSystem.Utilities;
 public partial class @PlayerControls : IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
-
     public @PlayerControls()
     {
         asset = InputActionAsset.FromJson(@"{
@@ -51,7 +50,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""02b3689c-932a-4696-8113-d08e4d831458"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
@@ -67,7 +66,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""OpenTravelMenu"",
                     ""type"": ""Button"",
-                    ""id"": ""ba4f5b3d-828d-48a6-8399-17057a635b30"",
+                    ""id"": ""9d294406-f5d5-46ab-9d1c-21dbd8008402"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -76,7 +75,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""esc"",
                     ""type"": ""Button"",
-                    ""id"": ""06c4ea4b-9232-4af2-8c27-9c1489f0f8cf"",
+                    ""id"": ""c823a645-083b-4a18-a5de-852c32844fa6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -174,7 +173,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cf02bdfa-9c5c-4f1f-8834-b0c930e1ad54"",
+                    ""id"": ""fa5acebe-9f5c-4429-9585-a96b77f442a8"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -185,7 +184,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3be2261a-2e03-4077-b409-f2ff08489550"",
+                    ""id"": ""dd5374b7-4dc8-4684-824d-5bf2782acb25"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -208,8 +207,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_OpenTravelMenu = m_Player.FindAction("OpenTravelMenu", throwIfNotFound: true);
         m_Player_esc = m_Player.FindAction("esc", throwIfNotFound: true);
     }
-
-    public static PlayerControls Instance { get; } = new PlayerControls();
 
     public void Dispose()
     {
