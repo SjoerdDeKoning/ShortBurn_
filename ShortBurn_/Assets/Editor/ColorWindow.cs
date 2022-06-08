@@ -6,7 +6,7 @@ public class ColorWindow : EditorWindow
     Color color;
     private Color colorBefore;
 
-    [MenuItem("Tools/ColorPicker")]
+    [MenuItem("Window/ColorPicker")]
     public static void ShowWindow()
     {
         GetWindow<ColorWindow>("ColorPicker");
