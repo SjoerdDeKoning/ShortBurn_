@@ -50,6 +50,7 @@ public class TimeTravel : MonoBehaviour
     {                      
         player.enabled = false;
         Vector3 playerToLevel = player.transform.localPosition;
+        Debug.Log(playerToLevel);
         switch (season) 
         {
             case Season.Summer:
@@ -74,7 +75,7 @@ public class TimeTravel : MonoBehaviour
                 }
                 break;
             case Season.Spring:
-                player.transform.SetParent(summerLevel.transform);
+                player.transform.SetParent(springLevel.transform);
                 if (skyboxSpring!= null)
                 {
                     RenderSettings.skybox = skyboxSpring;                   
@@ -85,6 +86,7 @@ public class TimeTravel : MonoBehaviour
         await Task.Delay(TimeSpan.FromSeconds(warpTimeDelay));
         onTimeWarp.Invoke();
         player.transform.localPosition = playerToLevel;
+        Debug.Log(playerToLevel);
         player.enabled = true;
     }
 }
