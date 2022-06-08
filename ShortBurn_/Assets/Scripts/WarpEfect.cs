@@ -26,8 +26,10 @@ public class WarpEfect : MonoBehaviour
         }
     }
 
-    private void WarpEffect()
+    public void WarpEffect()
     {
+        DoWarp = true;
+        
         if (_current >= 1)
         {
             DoWarp = false;

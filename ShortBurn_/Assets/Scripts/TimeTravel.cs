@@ -18,7 +18,7 @@ public class TimeTravel : MonoBehaviour
 
     [SerializeField]private Vector3 levelOffset;
 
-    [Header("SkyBox's")] 
+    [Header("SkyBox's")]
     [SerializeField]private Material skyboxSummer;
     [SerializeField]private Material skyboxWinter;
     [SerializeField]private Material skyboxAutumn;
@@ -39,7 +39,7 @@ public class TimeTravel : MonoBehaviour
     /// </summary>
     /// <param name="season"> the season you want to travel to</param>
     public void TimeWarp(Season season)
-    {
+    {                      
         player.enabled = false;
         Vector3 playerToLevel = player.transform.localPosition;
         switch (season) 
