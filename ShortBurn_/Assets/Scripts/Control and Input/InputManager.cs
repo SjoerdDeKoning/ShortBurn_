@@ -113,5 +113,10 @@ namespace Player_Controls
                                 Pov.enabled = false;
                                 onCloseTimeMenu.Invoke();
         }
+
+        public bool Escape()
+        {
+            return _playerControls.Player.esc.triggered;
+        }
     }
 }
