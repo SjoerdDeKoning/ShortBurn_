@@ -55,7 +55,9 @@ namespace Player_Pick_Up
             
             if (item.GetComponent<KeyItemController>())
             {
-                keyInventory.hasKey = false;
+                keyInventory.hasMainKey = false;
+                keyInventory.hasBasementKey = false;
+                keyInventory.hasGardenKey = false;
             }
             
             item.GetRigidbody.isKinematic = false;

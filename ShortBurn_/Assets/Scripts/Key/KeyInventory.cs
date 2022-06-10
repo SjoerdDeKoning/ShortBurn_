@@ -5,5 +5,7 @@ using UnityEngine;
 
 public class KeyInventory : MonoBehaviour
 {
-    public bool hasKey = false;
+    public bool hasMainKey = false;
+    public bool hasBasementKey = false;
+    public bool hasGardenKey = false;
 } 
