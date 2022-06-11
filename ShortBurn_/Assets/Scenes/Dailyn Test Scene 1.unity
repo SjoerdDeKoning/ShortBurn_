@@ -1115,6 +1115,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8302196266137018388, guid: 9407cca60d458e9409d14247a3b71b9f, type: 3}
+--- !u!4 &51620843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1221570522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &56939715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3684,6 +3689,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6360558719573625917, guid: 9407cca60d458e9409d14247a3b71b9f, type: 3}
+--- !u!4 &158659047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 158659039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &158659050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 158659039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160605417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1304526712143258188, guid: cf499bba13b863e48a0690746af21e9e, type: 3}
@@ -6631,6 +6646,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 356109825}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &368852468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 158659039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &368852469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368852468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 158659047}
+  rightDoor: {fileID: 158659050}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &368852470
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368852468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &372913455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8452,6 +8503,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 838601678738666619, guid: 05ebd5011b98553449b50bb64715e192, type: 3}
   m_PrefabInstance: {fileID: 478773025}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &483940344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1557255566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &483940345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483940344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1557255574}
+  rightDoor: {fileID: 1557255577}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &483940346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483940344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &489637515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8526,6 +8613,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 489637515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &489832629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 942173195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &489832630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489832629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &489832631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489832629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 942173206}
+  rightDoor: {fileID: 942173203}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
 --- !u!1001 &492101776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11278,7 +11401,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1714261923}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -11330,7 +11453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8942469774493786330, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8942469774493786330, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15417,6 +15540,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1426197649714397990, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
   m_PrefabInstance: {fileID: 942173195}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &942173203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 942173195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &942173206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 942173195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &964341667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15895,11 +16028,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
---- !u!224 &985894856 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8942469774493786330, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
-  m_PrefabInstance: {fileID: 664719622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &988745642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18491,6 +18619,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9118069214218795724, guid: 9407cca60d458e9409d14247a3b71b9f, type: 3}
+--- !u!4 &1199098059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1221570522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1210238311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18829,7 +18962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426197649714397990, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.9393616
+      value: -3.096
       objectReference: {fileID: 0}
     - target: {fileID: 1426197649714397990, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18871,13 +19004,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shoji Blinds (Sliding Doors)
       objectReference: {fileID: 0}
+    - target: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000000038146972
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.29999998
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
@@ -21468,6 +21609,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6360558719573625917, guid: 9407cca60d458e9409d14247a3b71b9f, type: 3}
+--- !u!4 &1419414333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1419414325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1419414336 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1419414325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1420234542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4488058370220516663, guid: 8e088947a6e12cc4789c97d1a0736a20, type: 3}
@@ -23155,6 +23306,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 1542909882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1544865347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 292434573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1544865348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544865347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1419414333}
+  rightDoor: {fileID: 1419414336}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &1544865349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544865347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1552074608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23296,9 +23483,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shoji Blinds (Sliding Doors) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000000038146972
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23368,6 +23559,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1426197649714397990, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
   m_PrefabInstance: {fileID: 1557255566}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1557255574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1557255566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1557255577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1557255566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557255583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557255568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d1250167943964da4d02683b2438af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPos: {x: 0, y: 0, z: 0}
+  speed: 1
+  _moving: 0
+  _opening: 1
+  _startPos: {x: 0, y: 0, z: 0}
+  _delay: 0
 --- !u!1001 &1558314770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24904,6 +25123,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 1657991932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1665949373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1895859090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1665949374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665949373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1895859098}
+  rightDoor: {fileID: 1895859101}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &1665949375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665949373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1678488495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25959,8 +26214,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 985894856}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27214,6 +27468,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 1844805305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1845273828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1497127758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1845273829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845273828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1845273830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845273828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 51620843}
+  rightDoor: {fileID: 1199098059}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!1 &1846140757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1419414325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1846140758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846140757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1419414333}
+  rightDoor: {fileID: 1419414336}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &1846140759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846140757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1846201181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28255,6 +28581,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6360558719573625917, guid: 9407cca60d458e9409d14247a3b71b9f, type: 3}
+--- !u!4 &1895859098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378037521736853428, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1895859090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1895859101 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1895859090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1905180573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31172,6 +31508,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8432758108578147317, guid: 8d728cdae5b8837428beae114ec433bf, type: 3}
   m_PrefabInstance: {fileID: 2103823468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2107332428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765709675892382108, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
+  m_PrefabInstance: {fileID: 1221570522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107332429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107332428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7a420b93eba3d4abec7fd3e2b90bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1199098059}
+  rightDoor: {fileID: 51620843}
+  moveSpeed: 1
+  sizeOfDoorInZ: 1
+  amountOfDoorInWall: 0.9
+  _DoorsOpen: 0
+--- !u!65 &2107332430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107332428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &2116231039
 PrefabInstance:
   m_ObjectHideFlags: 0
