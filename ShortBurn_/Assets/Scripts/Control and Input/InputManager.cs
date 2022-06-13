@@ -3,7 +3,7 @@ using Helper_Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Player_Controls
+namespace Control_and_Input
 {
     /// <summary>
     ///  This script is used if you want to use the input values.
@@ -11,23 +11,23 @@ namespace Player_Controls
     /// </summary>
     public class InputManager : SingletonBehaviour<InputManager>
     {
-        public GameObject TimeMenu;
+        public GameObject timeMenu;
         public UnityEvent onOpenTimeMenu;
         public UnityEvent onCloseTimeMenu;
         private PlayerControls _playerControls;
         
-        [SerializeField] private CinemachineVirtualCamera CVCamera;
-        [SerializeField] private CinemachinePOV Pov;
+        [SerializeField] private CinemachineVirtualCamera cvCamera;
+        [SerializeField] public CinemachinePOV pov;
         
         protected override void Awake()
         {
             base.Awake();
             _playerControls = new PlayerControls();
             
-            CVCamera = FindObjectOfType<CinemachineVirtualCamera>();
-            if (CVCamera != null)
+            cvCamera = FindObjectOfType<CinemachineVirtualCamera>();
+            if (cvCamera != null)
             {
-                Pov = CVCamera.GetCinemachineComponent<CinemachinePOV>();
+                pov = cvCamera.GetCinemachineComponent<CinemachinePOV>();
             }
             else
             {
@@ -81,11 +81,17 @@ namespace Player_Controls
             return _playerControls.Player.UseIitem.triggered;
         }
 
+        public void UpdateSensitivity(float sensitivity)
+        {
+            pov.m_VerticalAxis.m_MaxSpeed = sensitivity;
+            pov.m_HorizontalAxis.m_MaxSpeed = sensitivity;
+        }
+
         public void OpenTimeMenu()
         {
             if (_playerControls.Player.OpenTravelMenu.triggered)
             {
-                if (TimeMenu.activeSelf) 
+                if (timeMenu.activeSelf) 
                 {
                    closeTimeMenu();
                 }
@@ -99,18 +105,18 @@ namespace Player_Controls
         public void closeTimeMenu()
         {
              // close time menu
-                                TimeMenu.SetActive (false);
+                                timeMenu.SetActive (false);
                                 Cursor.lockState = CursorLockMode.Locked;
-                                Pov.enabled = true;
+                                pov.enabled = true;
                                 onOpenTimeMenu.Invoke();
         }
 
         public void openTimeMenu()
         {
              // open time menu
-                                TimeMenu.SetActive(true);
+                                timeMenu.SetActive(true);
                                 Cursor.lockState = CursorLockMode.Confined;
-                                Pov.enabled = false;
+                                pov.enabled = false;
                                 onCloseTimeMenu.Invoke();
         }
 
