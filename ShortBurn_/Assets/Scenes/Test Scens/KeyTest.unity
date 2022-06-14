@@ -363,6 +363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5182662980398681500, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
+      propertyPath: keyInventory
+      value: 
+      objectReference: {fileID: 2050061050}
     - target: {fileID: 5182662980398681503, guid: db46aa2bfb2913c4aa9238e72cdef3d0, type: 3}
       propertyPath: m_Name
       value: 'Player '
@@ -512,10 +516,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d770ab2e04d31fc4ea416a9b4078535b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Door: 1
-  _key: 0
-  _keyInventory: {fileID: 2050061050}
-  key: {fileID: 0}
+  mainDoor: 0
+  mainKey: 0
+  basementDoor: 1
+  basementKey: 0
+  gardenDoor: 0
+  gardenKey: 0
+  keyInventory: {fileID: 2050061050}
+  mainDoorObject: {fileID: 0}
+  basementDoorObject: {fileID: 814144512}
+  gardenDoorObject: {fileID: 0}
+  mainKeyGameObject: {fileID: 0}
+  basementKeyGameObject: {fileID: 828685399}
+  gardenKeyGameObject: {fileID: 0}
 --- !u!1001 &828685398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,10 +611,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d770ab2e04d31fc4ea416a9b4078535b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Door: 0
-  _key: 1
-  _keyInventory: {fileID: 2050061050}
-  key: {fileID: 0}
+  mainDoor: 0
+  mainKey: 0
+  basementDoor: 0
+  basementKey: 1
+  gardenDoor: 0
+  gardenKey: 0
+  keyInventory: {fileID: 2050061050}
+  mainDoorObject: {fileID: 0}
+  basementDoorObject: {fileID: 0}
+  gardenDoorObject: {fileID: 0}
+  mainKeyGameObject: {fileID: 0}
+  basementKeyGameObject: {fileID: 0}
+  gardenKeyGameObject: {fileID: 0}
 --- !u!1 &1960752179
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e2cf253a3bfe943b3d3a9473c7f762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasKey: 0
+  hasMainKey: 0
+  hasBasementKey: 0
+  hasGardenKey: 0
 --- !u!114 &2050061051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,10 +778,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630dd3903851b124a8e118f35d5c5f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeMenu: {fileID: 0}
+  timeMenu: {fileID: 0}
   onOpenTimeMenu:
     m_PersistentCalls:
       m_Calls: []
   onCloseTimeMenu:
     m_PersistentCalls:
       m_Calls: []
+  cvCamera: {fileID: 0}
+  pov: {fileID: 0}
