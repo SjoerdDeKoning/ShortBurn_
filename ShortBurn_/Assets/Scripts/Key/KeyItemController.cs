@@ -15,35 +15,21 @@ public class KeyItemController : MonoBehaviour
     
     [FormerlySerializedAs("_keyInventory")] [SerializeField] private KeyInventory keyInventory;
 
-    private KeyDoorController _mainDoorObject;
-    private KeyDoorController _basementDoorObject;
-    private KeyDoorController _gardenDoorObject;
+    public KeyDoorController mainDoorObject;
+    public KeyDoorController basementDoorObject;
+    public KeyDoorController gardenDoorObject;
 
     public GameObject mainKeyGameObject;
     public GameObject basementKeyGameObject;
     public GameObject gardenKeyGameObject;
 
-    private void Start()
-    {
-        if (mainDoor)
-        {
-            _mainDoorObject = GetComponent<KeyDoorController>();
-        }
-        else if (gardenDoor)
-        {
-            _gardenDoorObject = GetComponent<KeyDoorController>();
-        }
-        else if (gardenDoor)
-        {
-            _gardenDoorObject = GetComponent<KeyDoorController>();
-        }
-    }
+    
 
     public void ObjectInteraction()
     {
         if (mainDoor)
         {
-            _mainDoorObject.OpenDoor();
+            mainDoorObject.OpenDoor();
             mainKeyGameObject.SetActive(false);
             keyInventory.hasMainKey = false;
         }
@@ -54,8 +40,9 @@ public class KeyItemController : MonoBehaviour
 
         if (basementDoor)
         {
-            _basementDoorObject.OpenDoor();
+            basementDoorObject.OpenDoor();
             basementKeyGameObject.SetActive(false);
+            keyInventory.hasGardenKey = false;
         }
         else if (basementKey)
         {
@@ -64,7 +51,8 @@ public class KeyItemController : MonoBehaviour
         
         if(gardenDoor)
         {
-            _gardenDoorObject.OpenDoor();
+            Debug.Log("Here comes the next scene");
+            gardenKeyGameObject.SetActive(false);
         }
         else if (gardenKey)
         {

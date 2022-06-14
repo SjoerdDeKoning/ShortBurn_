@@ -17,12 +17,14 @@ namespace puzzle
         {
             if (cushion1 && cushion2 && cushion3 && cushion4)
             {
-                basementKey.gameObject.SetActive(true);
+                var basementPos = basementKey.transform.position;
+                basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
             }
 
             if (latern1 && latern2)
             {
-                gardenKey.gameObject.SetActive(true);
+                var gardenPos = gardenKey.transform.position;
+                gardenKey.transform.position = new Vector3(gardenPos.x, 1.5f, gardenPos.z);
             }
         }
 
