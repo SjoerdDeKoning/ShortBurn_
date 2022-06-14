@@ -50,5 +50,6 @@ namespace Control_and_Input
             _cinemachinePov.m_VerticalAxis.m_MaxSpeed = sens;
             _cinemachinePov.m_HorizontalAxis.m_MaxSpeed = sens;
         }
+        
     }
 }
