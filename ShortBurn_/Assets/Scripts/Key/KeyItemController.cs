@@ -52,6 +52,7 @@ public class KeyItemController : MonoBehaviour
         if(gardenDoor)
         {
             Debug.Log("Here comes the next scene");
+            gardenKeyGameObject.SetActive(false);
         }
         else if (gardenKey)
         {

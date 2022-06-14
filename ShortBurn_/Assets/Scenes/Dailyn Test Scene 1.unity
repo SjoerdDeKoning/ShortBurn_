@@ -3400,7 +3400,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2202160338905268406, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
---- !u!114 &127882314
+--- !u!114 &127882322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3421,11 +3421,11 @@ MonoBehaviour:
   keyInventory: {fileID: 1967416798}
   mainDoorObject: {fileID: 0}
   basementDoorObject: {fileID: 0}
-  gardenDoorObject: {fileID: 127882315}
+  gardenDoorObject: {fileID: 127882323}
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 1168656956}
---- !u!114 &127882315
+--- !u!114 &127882323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18654,7 +18654,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017215000}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -21349,7 +21349,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168656956}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -26708,18 +26708,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7850056946393279740, guid: 2d81880b6ec8bf442936439daeb77328, type: 3}
   m_PrefabInstance: {fileID: 1557255566}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1557255583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557255568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d1250167943964da4d02683b2438af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1558314770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26803,9 +26791,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 689855248039165760, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
       propertyPath: m_Name
       value: Garden gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199421521842043021, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
@@ -30801,11 +30805,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801629225}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -35061,6 +35065,56 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5614ee64b9d0546428043ca2cf5aa9c4, type: 3}
   m_PrefabInstance: {fileID: 1558314770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2061053146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061053145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d770ab2e04d31fc4ea416a9b4078535b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainDoor: 0
+  mainKey: 0
+  basementDoor: 0
+  basementKey: 0
+  gardenDoor: 1
+  gardenKey: 0
+  keyInventory: {fileID: 0}
+  mainDoorObject: {fileID: 0}
+  basementDoorObject: {fileID: 0}
+  gardenDoorObject: {fileID: 2061053147}
+  mainKeyGameObject: {fileID: 0}
+  basementKeyGameObject: {fileID: 0}
+  gardenKeyGameObject: {fileID: 1168656956}
+--- !u!114 &2061053147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061053145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aa63d3973d1ea4c8fba0ba4b0b2095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2061053148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061053145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8356302, y: 3, z: 1}
+  m_Center: {x: -1.2102609, y: 1.4843973, z: 0.094789684}
 --- !u!64 &2061053149
 MeshCollider:
   m_ObjectHideFlags: 0

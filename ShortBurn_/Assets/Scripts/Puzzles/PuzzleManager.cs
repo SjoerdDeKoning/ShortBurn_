@@ -17,14 +17,14 @@ namespace puzzle
         {
             if (cushion1 && cushion2 && cushion3 && cushion4)
             {
-                var position = basementKey.transform.position;
-                position = new Vector3(position.x, 1.5f, position.z);
+                var basementPos = basementKey.transform.position;
+                basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
             }
 
             if (latern1 && latern2)
             {
-                var position = gardenKey.transform.position;
-                position = new Vector3(position.x, 1.5f, position.z);
+                var gardenPos = gardenKey.transform.position;
+                gardenKey.transform.position = new Vector3(gardenPos.x, 1.5f, gardenPos.z);
             }
         }
 
