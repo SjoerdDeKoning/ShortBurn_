@@ -9,20 +9,25 @@ namespace puzzle
          private bool cushion1, cushion2, cushion3, cushion4;
 
          private bool latern1, latern2;
+
+         private bool done = true;
         
         [SerializeField] private GameObject basementKey;
         [SerializeField] private GameObject gardenKey;
 
         void Update()
         {
-            if (cushion1 && cushion2 && cushion3 && cushion4)
+            if (cushion1 && cushion2 && cushion3 && cushion4 && done)
             {
-                basementKey.gameObject.SetActive(true);
+                var basementPos = basementKey.transform.position;
+                basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
+                done = false;
             }
 
             if (latern1 && latern2)
             {
-                gardenKey.gameObject.SetActive(true);
+                var gardenPos = gardenKey.transform.position;
+                gardenKey.transform.position = new Vector3(gardenPos.x, 1.5f, gardenPos.z);
             }
         }
 
