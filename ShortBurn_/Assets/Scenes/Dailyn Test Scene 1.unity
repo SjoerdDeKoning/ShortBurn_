@@ -40552,6 +40552,166 @@ MonoBehaviour:
   hasMainKey: 0
   hasBasementKey: 0
   hasGardenKey: 0
+--- !u!114 &1967416799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967416797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19573de5c7d8f54c8cc3e56da411503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Door_Open_01
+    clip: {fileID: 8300000, guid: 7569d44067ad1e243ace51dfd5b7e1c3, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Door_Sliding_01
+    clip: {fileID: 8300000, guid: 1227d06ef65eaf640b6d9777f4f40320, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Flute_Warp_01
+    clip: {fileID: 8300000, guid: 24010ccd7f2e0b344bb5ababa9305e9b, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Flute_01
+    clip: {fileID: 8300000, guid: 207902d7e3aced842ba05adcd4743a38, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Key_Lock_01
+    clip: {fileID: 8300000, guid: e5e31b7bb353c2748bf2f4e0511ba5fe, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Key_Lock_02
+    clip: {fileID: 8300000, guid: bbeed2f493cb53b40b74a56184a6c2ca, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Key_Lock_02
+    clip: {fileID: 8300000, guid: bbeed2f493cb53b40b74a56184a6c2ca, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Key_Lock_Doesnt_Open_01
+    clip: {fileID: 8300000, guid: f0f987d315b8111418508f1e7d7c912d, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Pond_01
+    clip: {fileID: 8300000, guid: f08faadf96bb21c4c875174b861ee7ab, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Combination_Pillow_01
+    clip: {fileID: 8300000, guid: c0ddf75cf2595be48ad51ef47688404d, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Combination_Pillow_02
+    clip: {fileID: 8300000, guid: 06dd2c06429309f468566e4c7ad76336, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Combination_Pillow_03
+    clip: {fileID: 8300000, guid: dfa5f330e41f1614f9a4fddf465d60ca, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Combination_Pillow_04
+    clip: {fileID: 8300000, guid: 82139cbbf11dbf14089f34dcdef46b33, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Combination_Wrong_01
+    clip: {fileID: 8300000, guid: 984f371de6eeb054d8d4a14ccc909769, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle_Complete_01
+    clip: {fileID: 8300000, guid: f9d13cbb33385ad44977e0f4ccb5a8dd, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Garden_01
+    clip: {fileID: 8300000, guid: 30c35d4678f0d2d408103021468a7959, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Garden_02
+    clip: {fileID: 8300000, guid: e3fc59feacdc18944994079ec0627088, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Garden_03
+    clip: {fileID: 8300000, guid: 062ebc2c3802214469dcc7375de2f9b9, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Wood_01
+    clip: {fileID: 8300000, guid: 4882f3d93dcc75d4b99f25982bc3f9c0, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Wood_02
+    clip: {fileID: 8300000, guid: e4d8e4b606262f54da0f29b535aed5a3, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walk_Wood_03
+    clip: {fileID: 8300000, guid: 5b34c7718bf85354583d00d7f2b65d8e, type: 3}
+    volume: 1
+    pitch: 1.5
+    stereoPan: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1967416802
 MonoBehaviour:
   m_ObjectHideFlags: 0
