@@ -25,15 +25,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.3619
+      value: -391.63107
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.866
+      value: -18.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63,13 +63,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8465586024035158207, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d09771ed8a416754789ea2bf3216b7ff, type: 2}
+    - target: {fileID: -5639414341770066212, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_Name
-      value: Tree_01_Winter
+      value: Small_Tree_01_Winter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112731102878130267, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5493529674174755995, guid: a7c6dab2ea26e5946a849fb360f1bfb6, type: 3}
       propertyPath: m_Materials.Array.data[0]

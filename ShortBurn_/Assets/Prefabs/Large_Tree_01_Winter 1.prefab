@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 582233607686203944}
   - component: {fileID: -7349091041655199157}
   m_Layer: 0
-  m_Name: Tree_01_Winter 1
+  m_Name: Large_Tree_01_Winter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1756314506712174919
 Transform:
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374862400230099965}
-  m_LocalRotation: {x: -0, y: 0.3739603, z: -0, w: 0.9274447}
+  m_LocalRotation: {x: 0, y: 0.37395912, z: 0, w: 0.9274452}
   m_LocalPosition: {x: -7.680857, y: 0.61834764, z: -23.456886}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.2605, y: 1.2605, z: 1.2605}
   m_Children:
   - {fileID: 7692623373082634078}
   - {fileID: 1885447918908204073}
@@ -115,7 +115,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7692623373082634078
 Transform:
@@ -196,7 +196,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1885447918908204073
 Transform:
@@ -277,7 +277,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &942516673273629104
 Transform:
