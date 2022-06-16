@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class KeyDoorController : MonoBehaviour
 {
-    [SerializeField] private float timeToTurn;
+    [SerializeField] private float timeToTurn = 2;
     [SerializeField] private Vector3 rotate;
     
     
