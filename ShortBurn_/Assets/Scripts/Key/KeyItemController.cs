@@ -17,8 +17,11 @@ public class KeyItemController : MonoBehaviour
 
     public KeyDoorController mainDoorObject;
     public KeyDoorController basementDoorObject;
+    public KeyDoorController basementDoorObject2;
     public KeyDoorController gardenDoorObject;
 
+    public Collider basementDoorCollider;
+    
     public GameObject mainKeyGameObject;
     public GameObject basementKeyGameObject;
     public GameObject gardenKeyGameObject;
@@ -40,6 +43,8 @@ public class KeyItemController : MonoBehaviour
         else if (basementDoor)
         {
             basementDoorObject.OpenDoor();
+            basementDoorObject2.OpenDoor();
+            basementDoorCollider.enabled = false;
             basementKeyGameObject.SetActive(false);
             keyInventory.hasGardenKey = false;
         }
