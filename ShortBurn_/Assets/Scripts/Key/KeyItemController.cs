@@ -27,7 +27,7 @@ public class KeyItemController : MonoBehaviour
 
     public void ObjectInteraction()
     {
-        if (mainDoor)
+        if (mainDoor) 
         {
             mainDoorObject.OpenDoor();
             mainKeyGameObject.SetActive(false);
@@ -37,8 +37,7 @@ public class KeyItemController : MonoBehaviour
         {
             keyInventory.hasMainKey = true;
         }
-
-        if (basementDoor)
+        else if (basementDoor)
         {
             basementDoorObject.OpenDoor();
             basementKeyGameObject.SetActive(false);
@@ -48,12 +47,11 @@ public class KeyItemController : MonoBehaviour
         {
             keyInventory.hasBasementKey = true;
         }
-        
-        if(gardenDoor)
+        else if (gardenDoor) 
         {
             Debug.Log("Here comes the next scene");
             gardenKeyGameObject.SetActive(false);
-        }
+        } 
         else if (gardenKey)
         {
             keyInventory.hasGardenKey = true;
