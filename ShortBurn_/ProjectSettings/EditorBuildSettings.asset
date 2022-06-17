@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a6789ca15e095d54d8621a13b9019e72
   - enabled: 1
-    path: Assets/Scenes/Onne Scene.unity
-    guid: 6921e892e6d153f42b74687bee9b847f
+    path: Assets/Scenes/WinMenu.unity
+    guid: 3417bc6ca4f13764b8adcc2262092501
+  - enabled: 1
+    path: Assets/Scenes/Dailyn Test Scene 1.unity
+    guid: 1be95c91b74b27e43aceda8e1c6b5a29
   m_configObjects: {}

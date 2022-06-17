@@ -6,24 +6,34 @@ namespace puzzle
 {
     public class PuzzleManager : MonoBehaviour
     {
+        public TreeGrowing growingTree;
+        
          private bool cushion1, cushion2, cushion3, cushion4;
 
          private bool latern1, latern2;
+
+         private bool done = true;
+         private bool lanternDone = true;
         
         [SerializeField] private GameObject basementKey;
         [SerializeField] private GameObject gardenKey;
 
         void Update()
         {
-            if (cushion1 && cushion2 && cushion3 && cushion4)
+            if (cushion1 && cushion2 && cushion3 && cushion4 && done)
             {
-                basementKey.gameObject.SetActive(true);
+                var basementPos = basementKey.transform.position;
+                basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
+                done = false;
             }
 
-            if (latern1 && latern2)
+            if (latern1 && latern2 && lanternDone)
             {
-                gardenKey.gameObject.SetActive(true);
+                
+                growingTree.allowedToGrow = true;
+                lanternDone = false;
             }
+            
         }
 
         public void CushionActivation(int number)
@@ -56,6 +66,12 @@ namespace puzzle
                     latern2 = true;
                     break;
             }
+        }
+
+        public void GardenKeySpawn()
+        {
+            var gardenPos = gardenKey.transform.position;
+            gardenKey.transform.position = new Vector3(-7.88f, 3.227f, -6.681f);
         }
     }
 }

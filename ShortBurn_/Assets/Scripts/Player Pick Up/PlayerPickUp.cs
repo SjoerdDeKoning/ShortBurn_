@@ -1,3 +1,4 @@
+using Control_and_Input;
 using Player_Controls;
 using UnityEngine;
 using UnityEngine.Events;
@@ -55,7 +56,9 @@ namespace Player_Pick_Up
             
             if (item.GetComponent<KeyItemController>())
             {
-                keyInventory.hasKey = false;
+                keyInventory.hasMainKey = false;
+                keyInventory.hasBasementKey = false;
+                keyInventory.hasGardenKey = false;
             }
             
             item.GetRigidbody.isKinematic = false;
