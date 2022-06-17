@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
 public class KeyItemController : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class KeyItemController : MonoBehaviour
 
     public KeyDoorController mainDoorObject;
     public KeyDoorController basementDoorObject;
+    public KeyDoorController basementDoorObject2;
     public KeyDoorController gardenDoorObject;
 
+    public Collider basementDoorCollider;
+    
     public GameObject mainKeyGameObject;
     public GameObject basementKeyGameObject;
     public GameObject gardenKeyGameObject;
@@ -40,6 +44,8 @@ public class KeyItemController : MonoBehaviour
         else if (basementDoor)
         {
             basementDoorObject.OpenDoor();
+            basementDoorObject2.OpenDoor();
+            basementDoorCollider.enabled = false;
             basementKeyGameObject.SetActive(false);
             keyInventory.hasGardenKey = false;
         }
@@ -47,9 +53,9 @@ public class KeyItemController : MonoBehaviour
         {
             keyInventory.hasBasementKey = true;
         }
-        else if (gardenDoor) 
+        else if (gardenDoor)
         {
-            Debug.Log("Here comes the next scene");
+            SceneManager.LoadScene("WinMenu");
             gardenKeyGameObject.SetActive(false);
         } 
         else if (gardenKey)
