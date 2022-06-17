@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
 public class KeyItemController : MonoBehaviour
 {
@@ -52,9 +53,9 @@ public class KeyItemController : MonoBehaviour
         {
             keyInventory.hasBasementKey = true;
         }
-        else if (gardenDoor) 
+        else if (gardenDoor)
         {
-            Debug.Log("Here comes the next scene");
+            SceneManager.LoadScene("WinMenu");
             gardenKeyGameObject.SetActive(false);
         } 
         else if (gardenKey)
