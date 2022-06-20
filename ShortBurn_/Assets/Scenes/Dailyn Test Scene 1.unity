@@ -8863,7 +8863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014770, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014770, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -8887,7 +8887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014771, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.7
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014771, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52859,7 +52859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014770, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014770, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -52883,7 +52883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014771, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.7
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9021161607785014771, guid: 228dc920b6538c84fae683d13e54ba63, type: 3}
       propertyPath: m_LocalPosition.z
