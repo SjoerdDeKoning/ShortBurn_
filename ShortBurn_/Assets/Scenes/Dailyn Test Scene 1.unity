@@ -17907,6 +17907,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8942469772747681798, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
+      propertyPath: m_Text
+      value: winter
+      objectReference: {fileID: 0}
     - target: {fileID: 8942469773766071838, guid: 665f28b50aaa3e448b95f5e7d6286425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
