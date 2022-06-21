@@ -7,6 +7,7 @@ public class PopUpScript : MonoBehaviour
 {
     public GameObject popUpText;
     public GameObject objectAttachedTo;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CharacterController>())
