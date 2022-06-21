@@ -7,13 +7,28 @@ public class PopUpScript : MonoBehaviour
 {
     public GameObject popUpText;
     public GameObject objectAttachedTo;
-    
+
+    public KeyInventory _key;
+    public bool door;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<CharacterController>())
+        if (door)
         {
-            popUpText.SetActive(true);
+            if (other.GetComponent<CharacterController>() && _key.hasMainKey) 
+            {
+                popUpText.SetActive(true);
+            }
         }
+        if(!door)
+        {
+            if (other.GetComponent<CharacterController>()) 
+            {
+                popUpText.SetActive(true);
+            }
+        }
+        
+        
+        
     }
     private void OnTriggerExit(Collider other)
     {
