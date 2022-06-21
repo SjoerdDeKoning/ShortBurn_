@@ -26,6 +26,9 @@ public class TimeTravel : MonoBehaviour
     [SerializeField]private Material skyboxAutumn;
     [SerializeField]private Material skyboxSpring;
 
+    [Header("PostProcessing")] [SerializeField]
+    private PostProcessingManager postProcessing;
+
     [Header(("Warp info"))]
      [Tooltip("Time in seconds"),SerializeField] private float warpTimeDelay;
 
@@ -55,6 +58,7 @@ public class TimeTravel : MonoBehaviour
         {
             case Season.Summer:
                 player.transform.SetParent(summerLevel.transform);
+                postProcessing.ChangeToWarm();
                 if (skyboxSummer != null)
                 {
                     RenderSettings.skybox = skyboxSummer;                   
@@ -76,6 +80,7 @@ public class TimeTravel : MonoBehaviour
                 break;
             case Season.Spring:
                 player.transform.SetParent(springLevel.transform);
+                postProcessing.ChangeToCold();
                 if (skyboxSpring!= null)
                 {
                     RenderSettings.skybox = skyboxSpring;                   
