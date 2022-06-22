@@ -12,6 +12,7 @@ public class KeyDoorController : MonoBehaviour
     [SerializeField] private string doorOpenSoundName;
     public void OpenDoor()
     {
+        soundManager.Play(doorOpenSoundName);
         StartCoroutine(RotateMe(rotate, timeToTurn));
     }
 
