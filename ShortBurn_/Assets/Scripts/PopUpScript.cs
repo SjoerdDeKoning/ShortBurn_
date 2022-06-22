@@ -26,9 +26,6 @@ public class PopUpScript : MonoBehaviour
                 popUpText.SetActive(true);
             }
         }
-        
-        
-        
     }
     private void OnTriggerExit(Collider other)
     {
@@ -44,5 +41,10 @@ public class PopUpScript : MonoBehaviour
         {
             popUpText.SetActive(false);
         }
+    }
+
+    private void OnDisable()
+    {
+        popUpText.SetActive(false);
     }
 }

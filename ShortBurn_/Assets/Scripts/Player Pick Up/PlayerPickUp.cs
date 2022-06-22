@@ -41,7 +41,11 @@ namespace Player_Pick_Up
                 if (Physics.Raycast(raycastPoint.position, raycastPoint.forward, out hit,raycastMaxDistance))
                 {
                     _pickable = hit.transform.GetComponent<PickUpItem>();
-                    if (_pickable)
+                    if (_pickable && _pickable.Flute)
+                    {
+                        _pickable.gameObject.SetActive(false);
+                    }
+                    else if (_pickable && !_pickable.Flute)
                     {
                         PickUpItem(_pickable);
                     }
