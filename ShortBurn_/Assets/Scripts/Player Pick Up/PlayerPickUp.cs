@@ -17,6 +17,12 @@ namespace Player_Pick_Up
         public UnityEvent onItemPickup;
 
         private InputManager _input;
+        
+        [Header("Sounds")]
+        [SerializeField] private SoundManager soundManager;
+        [SerializeField] private string flutePickUpSound;
+        [SerializeField] private string keyPickUpSound;
+        
         private void Start()
         {
             _input = InputManager.instance;
@@ -43,10 +49,12 @@ namespace Player_Pick_Up
                     _pickable = hit.transform.GetComponent<PickUpItem>();
                     if (_pickable && _pickable.Flute)
                     {
+                        soundManager.Play(flutePickUpSound);
                         _pickable.gameObject.SetActive(false);
                     }
                     else if (_pickable && !_pickable.Flute)
                     {
+                        soundManager.Play(keyPickUpSound);
                         PickUpItem(_pickable);
                     }
                 }

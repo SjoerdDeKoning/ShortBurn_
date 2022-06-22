@@ -37,10 +37,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Play("Unox");
-    }
+    
 
     /// <summary>
     /// Will first check of the giving name is existing

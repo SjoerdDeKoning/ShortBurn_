@@ -18,6 +18,10 @@ public class Door : MonoBehaviour
     private Vector3 defaultRightDoorPosition;
     private Vector3 currentRightDoorPosition;
     private float openTime = 0;
+    
+    [Header("Sound")]
+    [SerializeField] private SoundManager soundManager;
+    [SerializeField] private string soundName;
 
     private void Start()
     {
@@ -49,6 +53,7 @@ public class Door : MonoBehaviour
     {
         if (other.GetComponent<CharacterController>())
         {
+            soundManager.Play(soundName);
             open = true;
             currentLeftDoorPosition = doorLeft.localPosition;
             currentRightDoorPosition = doorRight.localPosition;

@@ -18,10 +18,19 @@ namespace puzzle
         [SerializeField] private GameObject basementKey;
         [SerializeField] private GameObject gardenKey;
 
+        [Header("Sound")] 
+        [SerializeField] private SoundManager soundManager;
+        [SerializeField] private string cushionSoundName1;
+        [SerializeField] private string cushionSoundName2;
+        [SerializeField] private string cushionSoundName3;
+        [SerializeField] private string cushionSoundName4;
+        [SerializeField] private string puzzleCompleteSoundName;
+
         void Update()
         {
             if (cushion1 && cushion2 && cushion3 && cushion4 && done)
             {
+                soundManager.Play(puzzleCompleteSoundName);
                 var basementPos = basementKey.transform.position;
                 basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
                 done = false;
@@ -29,7 +38,7 @@ namespace puzzle
 
             if (latern1 && latern2 && lanternDone)
             {
-                
+                soundManager.Play(puzzleCompleteSoundName);
                 growingTree.allowedToGrow = true;
                 lanternDone = false;
             }
@@ -42,15 +51,19 @@ namespace puzzle
             {
                 case 1:
                     cushion1 = true;
+                    soundManager.Play(cushionSoundName1);
                     break;
                 case 2 when cushion1:
                     cushion2 = true;
+                    soundManager.Play(cushionSoundName2);
                     break;
                 case 3 when cushion2:
                     cushion3 = true;
+                    soundManager.Play(cushionSoundName3);
                     break;
                 case 4 when cushion3:
                     cushion4 = true;
+                    soundManager.Play(cushionSoundName4);
                     break;
             }
         }

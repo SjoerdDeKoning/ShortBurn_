@@ -7,8 +7,9 @@ public class KeyDoorController : MonoBehaviour
 {
     [SerializeField] private float timeToTurn = 2;
     [SerializeField] private Vector3 rotate;
-    
-    
+
+    [SerializeField] private SoundManager soundManager;
+    [SerializeField] private string doorOpenSoundName;
     public void OpenDoor()
     {
         StartCoroutine(RotateMe(rotate, timeToTurn));

@@ -3825,6 +3825,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 114044065}
   doorRight: {fileID: 114044063}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!135 &114044073
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9693,6 +9695,10 @@ PrefabInstance:
       value: Temple_Basement
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a33bc021d2efbd04fbcb87e6ab56f005, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a33bc021d2efbd04fbcb87e6ab56f005, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -11757,6 +11763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: 90, z: 0}
+  soundManager: {fileID: 1967416803}
+  doorOpenSoundName: Door_Open_01
 --- !u!1001 &413434794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12241,6 +12249,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 1967416803}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: soundWalkFloor
+      value: Walk_Wood_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: soundWalkGrass
+      value: Walk_Garden_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: _layerMaskInteract.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 882779732609071677, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12289,9 +12313,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Player '
       objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071679, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 1967416803}
+    - target: {fileID: 882779732609071679, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: keyPickUpSound
+      value: Key_Lock_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071679, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: flutePickUpSound
+      value: Flute_01
+      objectReference: {fileID: 0}
     - target: {fileID: 882779733257217890, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: far clip plane
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 882779733257217890, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: near clip plane
@@ -12315,7 +12351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882779733257217903, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: m_Lens.FarClipPlane
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 882779733257217903, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: m_Lens.NearClipPlane
@@ -13756,6 +13792,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 1557255577}
   doorRight: {fileID: 1557255574}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!135 &483940346
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14031,6 +14069,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 942173206}
   doorRight: {fileID: 942173203}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!1001 &492101776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14565,6 +14605,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 498471695}
   doorRight: {fileID: 498471693}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!135 &498471703
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17874,6 +17916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: -90, z: 0}
+  soundManager: {fileID: 1967416803}
+  doorOpenSoundName: Door_Open_01
 --- !u!1001 &608782553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20146,6 +20190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: 0, z: 0}
+  soundManager: {fileID: 0}
+  doorOpenSoundName: 
 --- !u!114 &700857740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25674,6 +25720,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 918686770}
   doorRight: {fileID: 918686760}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!1001 &918954921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25975,12 +26023,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: d6a4a48df5456a542afc4b6114ebf6c0, type: 2}
     - target: {fileID: -2495941878758861535, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2495941878758861535, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
       propertyPath: m_Name
       value: Temple_GroundFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -31777,6 +31833,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 1186559197}
   doorRight: {fileID: 1186559195}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!1001 &1187772400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34477,6 +34535,10 @@ PrefabInstance:
     - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
       propertyPath: m_Name
       value: temple stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -42767,6 +42829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: -90, z: 0}
+  soundManager: {fileID: 1967416803}
+  doorOpenSoundName: Door_Open_01
 --- !u!1001 &1632875187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45760,6 +45824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: 0, z: 0}
+  soundManager: {fileID: 0}
+  doorOpenSoundName: 
 --- !u!1001 &1749225642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48028,6 +48094,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 1497127767}
   doorRight: {fileID: 1497127766}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!4 &1845450139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7485387514013173095, guid: 4adeae2c31b41a2419d73b62e38f73a6, type: 3}
@@ -49398,7 +49466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpText: {fileID: 1770939586}
-  objectAttachedTo: {fileID: 0}
+  objectAttachedTo: {fileID: 1907531834}
   _key: {fileID: 1967416798}
   door: 1
 --- !u!65 &1907531837
@@ -50781,6 +50849,12 @@ MonoBehaviour:
   growingTree: {fileID: 321824869}
   basementKey: {fileID: 288365418}
   gardenKey: {fileID: 2137809471}
+  soundManager: {fileID: 1967416803}
+  cushionSoundName1: Puzzle_Combination_Pillow_01
+  cushionSoundName2: Puzzle_Combination_Pillow_02
+  cushionSoundName3: Puzzle_Combination_Pillow_03
+  cushionSoundName4: Puzzle_Combination_Pillow_04
+  puzzleCompleteSoundName: Puzzle_Complete_01
 --- !u!114 &1967416803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50803,7 +50877,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Door_Sliding_01
     clip: {fileID: 8300000, guid: 1227d06ef65eaf640b6d9777f4f40320, type: 3}
-    volume: 1
+    volume: 0.65
     pitch: 1.5
     stereoPan: 0
     loop: 0
@@ -53323,6 +53397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTurn: 2
   rotate: {x: 0, y: 0, z: 0}
+  soundManager: {fileID: 0}
+  doorOpenSoundName: 
 --- !u!65 &2061053148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54575,6 +54651,8 @@ MonoBehaviour:
   openSpeedMultiplier: 1
   doorLeft: {fileID: 1221570525}
   doorRight: {fileID: 1221570524}
+  soundManager: {fileID: 1967416803}
+  soundName: Door_Sliding_01
 --- !u!135 &2107332430
 SphereCollider:
   m_ObjectHideFlags: 0
