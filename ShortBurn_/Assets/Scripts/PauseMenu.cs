@@ -10,11 +10,12 @@ public class PauseMenu : MonoBehaviour
 {
     public bool _gameIsPaused = false;
     
-    [SerializeField] private GameObject pauseMenuUi;
+    [SerializeField] private GameObject pauseMenuUiCold;
+    [SerializeField] private GameObject pauseMenuUiWarm;
     
     [SerializeField] private InputManager inputManager ;
 
-    
+    public bool isWinter;
 
     void Update()
     {
@@ -31,7 +32,8 @@ public class PauseMenu : MonoBehaviour
     //No? then it will continue on this code:
     public void Resume()
     {
-        pauseMenuUi.SetActive(false);
+        pauseMenuUiCold.SetActive(false);
+        pauseMenuUiWarm.SetActive(false);
         Time.timeScale = 1f;
         _gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -40,7 +42,15 @@ public class PauseMenu : MonoBehaviour
     //Yes? then it will pause on this code:
     public void Pause()
     {
-        pauseMenuUi.SetActive(true);
+        if (isWinter)
+        {
+            pauseMenuUiCold.SetActive(true);
+        }
+        else
+        {
+            pauseMenuUiWarm.SetActive(true);
+        }
+        
         Time.timeScale = 0f;
         _gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
@@ -61,4 +71,5 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Test");
         Application.Quit();
     }
+    
 }

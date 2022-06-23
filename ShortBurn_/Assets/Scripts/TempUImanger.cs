@@ -7,10 +7,12 @@ using UnityEngine;
 public class TempUImanger : MonoBehaviour
 {
     public TimeTravel travel;
+    public PauseMenu pauseMenu;
 
     public void WarpSummer()
     {
         travel.TimeWarp(Season.Summer);
+        pauseMenu.isWinter = false;
     }
 
     public void WarpWinter()
@@ -21,6 +23,7 @@ public class TempUImanger : MonoBehaviour
     public void WarpSpring()
     {
         travel.TimeWarp(Season.Spring);
+        pauseMenu.isWinter = true;
     }
 
     public void WarpAutumn()
