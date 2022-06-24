@@ -13,6 +13,8 @@ public class TreeGrowing : MonoBehaviour
 
     public PuzzleManager puzzleManager;
 
+    public AudioSource audioSource;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +28,7 @@ public class TreeGrowing : MonoBehaviour
     {
         float timer = 0;
         allowedToGrow = false;
-        
+        audioSource.Play();
         while(maxSize > transform.localScale.x)
         {
             timer += Time.deltaTime;
@@ -34,6 +36,7 @@ public class TreeGrowing : MonoBehaviour
             yield return null;
         }
         puzzleManager.GardenKeySpawn();
+        audioSource.Stop();
         yield return null;
        
     }

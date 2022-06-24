@@ -17,6 +17,9 @@ namespace Player_Controls
 
         private InputManager _inputManager;
         private Transform _cameraTransform;
+
+        public AudioSource walkingSfxWood;
+        public AudioSource walkingSfxGrass;
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -46,6 +49,26 @@ namespace Player_Controls
             move = _cameraTransform.forward * move.z + _cameraTransform.right * move.x;
             move.y = 0;
             _controller.Move(move * (Time.deltaTime * playerSpeed));
+
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position,Vector3.down,out hit,3f) && hit.transform.CompareTag("Grass"))
+            {
+                if (movement != Vector2.zero && !walkingSfxGrass.isPlaying)
+                {
+                    walkingSfxGrass.volume = Random.Range(0.25f, 0.5f);
+                    walkingSfxGrass.pitch = Random.Range(0.8f, 1.2f);
+                    walkingSfxGrass.Play();
+                }
+            }
+            else
+            {
+                if (movement != Vector2.zero && !walkingSfxWood.isPlaying)
+                {
+                    walkingSfxWood.volume = Random.Range(0.25f, 0.5f);
+                    walkingSfxWood.pitch = Random.Range(0.8f, 1.2f);
+                    walkingSfxWood.Play();
+                }
+            }
         }
         private void Gravity()
         {

@@ -14,6 +14,8 @@ namespace puzzle
 
          private bool done = true;
          private bool lanternDone = true;
+
+         public SoundPuzzle2 _soundPuzzle2;
         
         [SerializeField] private GameObject basementKey;
         [SerializeField] private GameObject gardenKey;
@@ -33,6 +35,7 @@ namespace puzzle
                 soundManager.Play(puzzleCompleteSoundName);
                 var basementPos = basementKey.transform.position;
                 basementKey.transform.position = new Vector3(basementPos.x, 1.5f, basementPos.z);
+                _soundPuzzle2.doingPuzzle = false;
                 done = false;
             }
 
