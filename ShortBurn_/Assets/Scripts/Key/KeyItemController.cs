@@ -56,6 +56,7 @@ public class KeyItemController : MonoBehaviour
         else if (gardenDoor)
         {
             postProcessingManager.ChangeToNormal();
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("WinMenu");
             gardenKeyGameObject.SetActive(false);
         } 

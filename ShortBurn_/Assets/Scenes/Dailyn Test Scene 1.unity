@@ -36668,7 +36668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1295558055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52769,42 +52769,42 @@ MonoBehaviour:
   sounds:
   - name: Door_Open_01
     clip: {fileID: 8300000, guid: 7569d44067ad1e243ace51dfd5b7e1c3, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Door_Sliding_01
     clip: {fileID: 8300000, guid: 1227d06ef65eaf640b6d9777f4f40320, type: 3}
-    volume: 0.65
+    volume: 0.45
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Flute_Warp_01
     clip: {fileID: 8300000, guid: 24010ccd7f2e0b344bb5ababa9305e9b, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Flute_01
     clip: {fileID: 8300000, guid: 207902d7e3aced842ba05adcd4743a38, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Key_Lock_01
     clip: {fileID: 8300000, guid: e5e31b7bb353c2748bf2f4e0511ba5fe, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Key_Lock_02
     clip: {fileID: 8300000, guid: bbeed2f493cb53b40b74a56184a6c2ca, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
@@ -52825,35 +52825,35 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Pond_01
     clip: {fileID: 8300000, guid: f08faadf96bb21c4c875174b861ee7ab, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Puzzle_Combination_Pillow_01
     clip: {fileID: 8300000, guid: c0ddf75cf2595be48ad51ef47688404d, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Puzzle_Combination_Pillow_02
     clip: {fileID: 8300000, guid: 06dd2c06429309f468566e4c7ad76336, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Puzzle_Combination_Pillow_03
     clip: {fileID: 8300000, guid: dfa5f330e41f1614f9a4fddf465d60ca, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
     source: {fileID: 0}
   - name: Puzzle_Combination_Pillow_04
     clip: {fileID: 8300000, guid: 82139cbbf11dbf14089f34dcdef46b33, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1.5
     stereoPan: 0
     loop: 0
@@ -52867,7 +52867,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Puzzle_Complete_01
     clip: {fileID: 8300000, guid: f9d13cbb33385ad44977e0f4ccb5a8dd, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1.5
     stereoPan: 0
     loop: 0
