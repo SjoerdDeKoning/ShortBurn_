@@ -29,4 +29,9 @@ public class PostProcessingManager : MonoBehaviour
     {
         _liftGammaGain.lift.Override(new Vector3(1.25f,1.15f,1));
     }
+
+    public void ChangeToNormal()
+    {
+        _liftGammaGain.lift.Override(new Vector3(1f,1f,1));
+    }
 }
