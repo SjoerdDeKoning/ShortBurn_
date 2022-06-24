@@ -8508,6 +8508,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!114 &288365420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8951,6 +8952,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!65 &293906551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17112,6 +17114,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 288365418}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!1001 &541036959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21282,6 +21285,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!64 &700857741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44560,6 +44564,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 293906548}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!114 &1632522265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47555,6 +47560,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!114 &1748398793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55485,6 +55491,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 1692513351}
 --- !u!114 &2061053147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57901,6 +57908,7 @@ MonoBehaviour:
   mainKeyGameObject: {fileID: 0}
   basementKeyGameObject: {fileID: 0}
   gardenKeyGameObject: {fileID: 0}
+  postProcessingManager: {fileID: 0}
 --- !u!65 &2137809474
 BoxCollider:
   m_ObjectHideFlags: 0

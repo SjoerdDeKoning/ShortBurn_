@@ -27,7 +27,7 @@ public class KeyItemController : MonoBehaviour
     public GameObject basementKeyGameObject;
     public GameObject gardenKeyGameObject;
 
-    
+    public PostProcessingManager postProcessingManager;
 
     public void ObjectInteraction()
     {
@@ -55,6 +55,7 @@ public class KeyItemController : MonoBehaviour
         }
         else if (gardenDoor)
         {
+            postProcessingManager.ChangeToNormal();
             SceneManager.LoadScene("WinMenu");
             gardenKeyGameObject.SetActive(false);
         } 
