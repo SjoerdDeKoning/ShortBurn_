@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using Cinemachine;
 using Control_and_Input;
-using Player_Controls;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,8 +12,24 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUiWarm;
     
     [SerializeField] private InputManager inputManager ;
+    private CinemachinePOV pov;
+
+
+    [SerializeField] private GameObject pauzeMenu;
+    [SerializeField] private Animator summerAnimator;
+    [SerializeField] private Animator winterAnimator;
+    
 
     public bool isWinter;
+
+    private void Start()
+    {
+        var cvCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        if (cvCamera != null)
+        {
+            pov = cvCamera.GetCinemachineComponent<CinemachinePOV>();
+        }
+    }
 
     void Update()
     {
@@ -32,26 +46,37 @@ public class PauseMenu : MonoBehaviour
     //No? then it will continue on this code:
     public void Resume()
     {
-        pauseMenuUiCold.SetActive(false);
-        pauseMenuUiWarm.SetActive(false);
-        Time.timeScale = 1f;
-        _gameIsPaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        StartCoroutine(ResumeCoroutine());
     }
-
+    
+    IEnumerator ResumeCoroutine()
+    {
+        winterAnimator.SetBool("Up", true);
+                summerAnimator.SetBool("Up",true);
+                _gameIsPaused = false;
+                pov.enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                yield return new WaitForSeconds(1.8f);
+                pauseMenuUiCold.SetActive(false);
+                pauseMenuUiWarm.SetActive(false);
+                pauzeMenu.SetActive(false);
+    }
     //Yes? then it will pause on this code:
     public void Pause()
     {
+        pauzeMenu.SetActive(true);
         if (isWinter)
         {
             pauseMenuUiCold.SetActive(true);
+            winterAnimator.SetBool("Up",false);
         }
         else
         {
             pauseMenuUiWarm.SetActive(true);
+            summerAnimator.SetBool("Up",false);
         }
-        
-        Time.timeScale = 0f;
+
+        pov.enabled = false;
         _gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -60,15 +85,12 @@ public class PauseMenu : MonoBehaviour
     //Remember to put your scene als in the build settings other wise it wont work
     public void LoadScene(string Scene)
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(Scene);
     }
 
     //Exit game when is clicked on Exit
     public void ExitGame()
     {
-        Time.timeScale = 1f;
-        Debug.Log("Test");
         Application.Quit();
     }
     
