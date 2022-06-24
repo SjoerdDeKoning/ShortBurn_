@@ -1082,7 +1082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &42476747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10421,6 +10421,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a33bc021d2efbd04fbcb87e6ab56f005, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a33bc021d2efbd04fbcb87e6ab56f005, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -13114,6 +13118,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
       propertyPath: soundWalkGrass
+      value: Walk_Garden_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: audioNameIndoorWalk
+      value: Walk_Wood_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
+      propertyPath: audioNameOutdoorWalk
       value: Walk_Garden_01
       objectReference: {fileID: 0}
     - target: {fileID: 882779732609071676, guid: e587ac63f2b9ee542bd98c2e71d6400c, type: 3}
@@ -22185,7 +22197,7 @@ MonoBehaviour:
   pauseMenuUiCold: {fileID: 711046247}
   pauseMenuUiWarm: {fileID: 306222008}
   inputManager: {fileID: 1967416796}
-  pov: {fileID: 0}
+  pauzeMenu: {fileID: 42476746}
   summerAnimator: {fileID: 306222012}
   winterAnimator: {fileID: 711046251}
   isWinter: 0
@@ -27437,6 +27449,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb90d2e581c00294abfdeab61aa0af19, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -36150,6 +36166,10 @@ PrefabInstance:
     - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8894032202849871085, guid: daeb2bc6d7113ac4ba611298b12f8053, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -52615,6 +52635,14 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 732456562}
+    - target: {fileID: 5247282290700776257, guid: a59ce425e68f32443b2a6d0739d3ca58, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 1967416803}
+    - target: {fileID: 5247282290700776257, guid: a59ce425e68f32443b2a6d0739d3ca58, type: 3}
+      propertyPath: warpSoundName
+      value: Flute_Warp_01
+      objectReference: {fileID: 0}
     - target: {fileID: 5247282290700776258, guid: a59ce425e68f32443b2a6d0739d3ca58, type: 3}
       propertyPath: player
       value: 
@@ -52840,10 +52868,10 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Walk_Garden_01
     clip: {fileID: 8300000, guid: 30c35d4678f0d2d408103021468a7959, type: 3}
-    volume: 1
+    volume: 0.25
     pitch: 1.5
     stereoPan: 0
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Walk_Garden_02
     clip: {fileID: 8300000, guid: e3fc59feacdc18944994079ec0627088, type: 3}
